@@ -41,7 +41,7 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: json.data,
-      revalidate: 20
-    }
+    }, 
+    revalidate: 20
   }
 }
