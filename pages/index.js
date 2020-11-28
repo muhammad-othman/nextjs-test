@@ -8,6 +8,12 @@ export default function Home({ recipes }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          property="og:image"
+          content={`https://og-image.now.sh/${encodeURI(
+            siteTitle
+          )}.png?theme=light&md=0&fontSize=75px`}
+        />
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>

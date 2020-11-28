@@ -14,12 +14,6 @@ export default function Layout({ children, home }) {
           name="description"
           content="Cook in door"
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px`}
-        />
         <meta name="og:title" content={siteTitle} />
       </Head>
       <main>{children}</main>
