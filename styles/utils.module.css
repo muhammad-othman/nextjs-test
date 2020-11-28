@@ -50,3 +50,13 @@
   .lightText {
     color: #999;
   }
+
+  .headerImage {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .headerHomeImage {
+    width: 8rem;
+    height: 8rem;
+  }
