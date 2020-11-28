@@ -34,7 +34,8 @@ export async function getStaticProps() {
   const json = await res.json();
   return {
     props: {
-      recipes: json.data
+      recipes: json.data,
+      revalidate: 20
     }
   }
 }

@@ -48,7 +48,8 @@ export async function getStaticProps({ params }) {
     console.log(recipe);
     return {
         props: {
-            recipe
+            recipe,
+            revalidate: 20
         }
     }
 }
