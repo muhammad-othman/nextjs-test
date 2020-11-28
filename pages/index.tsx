@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 
 export default function Home({ recipes }) {
@@ -8,6 +8,11 @@ export default function Home({ recipes }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="og:title" content={siteTitle} />
+        <meta
+          name="description"
+          content="Recipes app to help you cook in your house"
+        />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
@@ -41,7 +46,7 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: json.data,
-    }, 
+    },
     revalidate: 20
   }
 }
